@@ -68,10 +68,10 @@ const Footer = ({}: FooterProps) => (
 
 
                 <div className="flex gap-4 text-gray-400">
-                <a href="https://github.com/Froas/solve-chain-why/blob/master/PrivacyAndPolicy.md" className="hover:text-green-400 transition-colors">
+                <a href="https://github.com/Froas/solve-chain-why/blob/master/PRIVACY.md" className="hover:text-green-400 transition-colors">
                     Privacy Policy
                 </a>
-                <a href="https://github.com/Froas/solve-chain-why/blob/master/TermsOfService.md" className="hover:text-green-400 transition-colors">
+                <a href="https://github.com/Froas/solve-chain-why/blob/master/TERMS.md" className="hover:text-green-400 transition-colors">
                     Terms Of Service
                 </a>
                 <a href="https://github.com/Froas/solve-chain-why" className="hover:text-green-400 transition-colors">
