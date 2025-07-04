@@ -10,9 +10,9 @@ interface AIProviderConfig {
 class AIService {
     private providers: Record<AIProvider, AIProviderConfig> = {
         openai: {
-            name: 'OpenAI',
+            name: 'Gemini',
             complete: async (prompt: string) => {
-                const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+                const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
                 if (!apiKey) {
                     console.error("OpenAI key is not defined. Please set OPENAI_API_KEY in your environment variables")
                     throw new Error("OpenAI key is not defined. Please set OPENAI_API_KEY in your environment variables")
