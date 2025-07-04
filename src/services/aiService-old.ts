@@ -48,23 +48,23 @@ export const buildPrompt = (context: string, level: number, language: string = '
     return prompts[language as keyof typeof prompts] || prompts.en
 }
 
-export const generateWhy = async (
-        provider: AIProvider,
-        apiKey: string,
-        context: string,
-        level: number,
-        language: string = 'en'
-    ): Promise<AIResponse> => {
-    const prompt = buildPrompt(context, level, language)
+// export const generateWhy = async (
+//         provider: AIProvider,
+//         apiKey: string,
+//         context: string,
+//         level: number,
+//         language: string = 'en'
+//     ): Promise<AIResponse> => {
+//     const prompt = buildPrompt(context, level, language)
 
-    switch (provider) {
-        case 'claude':
-        return callClaude(apiKey, prompt)
-        case 'gemini':
-        // return callGemini(apiKey, prompt)
-        case 'openai':
-        // return callOpenAI(apiKey, prompt)
-        default:
-        throw new Error(`Unsupported AI provider: ${provider}`)
-    }
-}
+//     switch (provider) {
+//         // case 'claude':
+//         // return callClaude(apiKey, prompt)
+//         // case 'gemini':
+//         // // return callGemini(apiKey, prompt)
+//         // case 'openai':
+//         // // return callOpenAI(apiKey, prompt)
+//         // default:
+//         // throw new Error(`Unsupported AI provider: ${provider}`)
+//     }
+// }

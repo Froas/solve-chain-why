@@ -12,7 +12,7 @@ export interface Analysis {
     whySteps: WhyStep[]
     rootCause?: string
     solutions: string[]
-    aiProvider: 'gemini' | 'claude' | 'openai'
+    aiProvider: 'gemini' | 'openai' | 'llama' | 'deepseek'| 'groq'
     createdAt: Date,
     status: string
 }
@@ -25,4 +25,4 @@ export interface AIResponse {
 }
 
 
-export type AIProvider = 'claude' | 'gemini' | 'openai';
+export type AIProvider = 'gemini' | 'openai' | 'llama' | 'deepseek'| 'groq'

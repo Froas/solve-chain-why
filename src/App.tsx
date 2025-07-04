@@ -11,7 +11,7 @@ import NotFoundPage from './components/Layout/NotFoundPage';
 import type { AIProvider } from './types';
 
 function App() {
-  const [aiProvider, setAiProvider] = useState<AIProvider>('claude');
+  const [aiProvider, setAiProvider] = useState<AIProvider>('gemini');
   const { i18n } = useTranslation();
 
 
@@ -29,7 +29,7 @@ function App() {
     ) as AIProvider;
     if (
       savedProvider &&
-      ['claude', 'gemini', 'openai'].includes(savedProvider)
+      ['gemini', 'openai', 'glock', 'Llama', 'DeepSeek'].includes(savedProvider)
     ) {
       setAiProvider(savedProvider);
     }

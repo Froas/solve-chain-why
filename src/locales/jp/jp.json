@@ -32,7 +32,10 @@
         "select": "AIプロバイダーを選択:",
         "claude": "Claude",
         "gemini": "Gemini",
-        "openai": "OpenAI"
+        "openai": "OpenAI",
+        "deepseek": "DeepsSeek",
+        "llama": "Llama",
+        "gloq": "Gloq"
     },
     "language": {
         "select": "言語",

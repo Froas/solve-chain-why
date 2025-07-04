@@ -11,7 +11,8 @@
     },
     "header": {
         "title": "5 Why Problem Solver",
-        "subtitle": "AI-Powered Root Cause Analysis"
+        "subtitle": "AI-Powered Root Cause Analysis",
+        "doc": "Docs"
     },
     "problemInput": {
         "title": "Describe Your Problem",
@@ -32,7 +33,10 @@
         "select": "Select AI Provider:",
         "claude": "Claude",
         "gemini": "Gemini",
-        "openai": "OpenAI"
+        "openai": "OpenAI",
+        "deepseek": "DeepsSeek",
+        "llama": "Llama",
+        "gloq": "Gloq"
     },
     "language": {
         "select": "Language",
