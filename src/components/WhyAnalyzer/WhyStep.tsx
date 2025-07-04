@@ -21,7 +21,6 @@ export const WhyStep: React.FC<WhyStepProps> = ({
     onSubmit,
     isActive,
     isGeneratingQuestion,
-    style
 }) => {
     const { t } = useTranslation();
 

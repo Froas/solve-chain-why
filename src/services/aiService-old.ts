@@ -1,7 +1,7 @@
-import type{ AIResponse, AIProvider } from '../types'
-import { callClaude } from './claudeAPI'
-import { callGemini } from './geminiAPI'
-import { callOpenAI } from './openaiAPI'
+// import type{ AIResponse, AIProvider } from '../types'
+// import { callClaude } from './claudeAPI'
+// import { callGemini } from './geminiAPI'
+// import { callOpenAI } from './openaiAPI'
 
 export const buildPrompt = (context: string, level: number, language: string = 'en'): string => {
     const prompts = {

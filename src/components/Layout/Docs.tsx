@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 const DocsPage = () => {
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     return (
         <div className="flex-1 bg-black font-mono">
