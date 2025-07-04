@@ -1,52 +1,56 @@
-import type { AIProvider } from '../types/whyAnalyzer';
+import type { AIProvider } from '../types';
+import { callGemini } from './geminiAPI';
+import { callOpenAI } from './openaiAPI';
+
+interface AIProviderConfig {
+    name: string;
+    complete: (prompt: string) => Promise<string>;
+}
 
 class AIService {
-    private providers: Record<string, AIProvider> = {
+    private providers: Record<AIProvider, AIProviderConfig> = {
         claude: {
-        name: 'Claude',
-        complete: async (prompt: string) => {
-            // return await window.claude.complete(prompt);
-            return ""
-        }
+            name: 'Claude',
+            complete: async (prompt: string) => {
+                // return await window.claude.complete(prompt);
+                return ""
+            }
         },
         openai: {
-        name: 'OpenAI',
-        complete: async (prompt: string) => {
-            // Implementation for OpenAI
-            throw new Error('OpenAI not implemented');
-        }
+            name: 'OpenAI',
+            complete: async (prompt: string) => {
+                const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+                if (!apiKey) {
+                    console.error("OpenAI key is not defined. Please set OPENAI_API_KEY in your environment variables")
+                    throw new Error("OpenAI key is not defined. Please set OPENAI_API_KEY in your environment variables")
+                }
+                return await callOpenAI(apiKey, prompt)
+            }
         },
         gemini: {
-        name: 'Gemini',
-        complete: async (prompt: string) => {
-            // Implementation for Gemini
-            throw new Error('Gemini not implemented');
-        }
+            name: 'Gemini',
+            complete: async (prompt: string) => {
+                const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+                if (!apiKey) {
+                    console.error("Gemini API key is not defined. Please set GEMINI_API_KEY in your environment variables.")
+                    throw new Error('Gemini API key is not defined. Please set GEMINI_API_KEY in your environment variables.');
+                }
+                return await callGemini(apiKey, prompt);
+            }
         }
     };
 
-    private currentProvider = 'claude';
-
-    setProvider(provider: string) {
-        if (this.providers[provider]) {
-        this.currentProvider = provider;
+    async complete(prompt: string, provider: AIProvider): Promise<string> {
+        const providerConfig = this.providers[provider];
+        if (!providerConfig) {
+            throw new Error(`Provider ${provider} not found`);
         }
+        console.log(providerConfig, "gge")
+        return await providerConfig.complete(prompt);
     }
 
-    async complete(prompt: string): Promise<string> {
-        const provider = this.providers[this.currentProvider];
-        if (!provider) {
-        throw new Error(`Provider ${this.currentProvider} not found`);
-        }
-        return await provider.complete(prompt);
-    }
-
-    getAvailableProviders(): string[] {
-        return Object.keys(this.providers);
-    }
-
-    getCurrentProvider(): string {
-        return this.currentProvider;
+    getAvailableProviders(): AIProvider[] {
+        return Object.keys(this.providers) as AIProvider[];
     }
 }
 

@@ -1,11 +1,13 @@
 import { aiService } from './aiService'
+import type { AIProvider } from '../types'
 
 export class QuestionGenerator {
     async generateFollowUpQuestion(
         stepIndex: number,
         problem: string,
         whys: string[],
-        locale: string
+        locale: string,
+        aiProvider: AIProvider
     ): Promise<string> {
         try {
             let prompt
@@ -16,7 +18,7 @@ export class QuestionGenerator {
                 prompt = this.createFollowUpPrompt(problem, whys, stepIndex, locale)
             }
 
-            const response = await aiService.complete(prompt)
+            const response = await aiService.complete(prompt, aiProvider) 
             return response.trim()
         } catch (error) {
             console.error('Error generating follow-up question:', error)

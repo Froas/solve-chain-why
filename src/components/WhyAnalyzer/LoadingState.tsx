@@ -5,13 +5,13 @@ export const LoadingState: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="text-center py-12">
-            <div className="flex justify-center mb-4">
-                <div className="w-2 h-2 rounded-full bg-gray-600 animate-bounce mx-1" style={{ animationDelay: '0ms' }}></div>
-                <div className="w-2 h-2 rounded-full bg-gray-600 animate-bounce mx-1" style={{ animationDelay: '150ms' }}></div>
-                <div className="w-2 h-2 rounded-full bg-gray-600 animate-bounce mx-1" style={{ animationDelay: '300ms' }}></div>
+        <div className="max-w-2xl mx-auto bg-gray-900 border border-gray-800 rounded-lg p-8 text-center ml-16">
+            <div className="flex justify-center mb-6">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce mx-1"></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce mx-1" style={{ animationDelay: '0.1s' }}></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce mx-1" style={{ animationDelay: '0.2s' }}></div>
             </div>
-            <p className="text-lg" style={{ color: '#3F3F47' }}>
+            <p className="text-lg text-gray-300 font-mono">
                 {t('analyzingResponses')}
             </p>
         </div>

@@ -1,6 +1,4 @@
-import type{ AIResponse } from '../types'
-
-export const callOpenAI = async (apiKey: string, prompt: string): Promise<AIResponse> => {
+export const callOpenAI = async (apiKey: string, prompt: string): Promise<string> => {
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -29,7 +27,7 @@ export const callOpenAI = async (apiKey: string, prompt: string): Promise<AIResp
         }
 
         const text = data.choices[0].message.content
-        return JSON.parse(text)
+        return text
     } catch (error) {
         console.error('OpenAI API call failed:', error)
         throw new Error(`Failed to call OpenAI API: ${error instanceof Error ? error.message : 'Unknown error'}`)

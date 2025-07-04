@@ -17,19 +17,18 @@ export const ExampleButtons: React.FC<ExampleButtonsProps> = ({ onExampleSelect 
     ];
 
     return (
-        <div className="mb-4">
-        <div className="flex flex-wrap gap-2">
-            {examples.map(({ key, text }) => (
-            <button
-                key={key}
-                onClick={() => onExampleSelect(t(text))}
-                className="px-3 py-1 text-sm rounded-full border hover:bg-gray-100 transition-colors"
-                style={{ borderColor: '#3F3F47', color: '#3F3F47' }}
-            >
-                {t(key)}
-            </button>
-            ))}
-        </div>
+        <div className="mb-6">
+            <div className="flex flex-wrap gap-2">
+                {examples.map(({ key, text }) => (
+                    <button
+                        key={key}
+                        onClick={() => onExampleSelect(t(text))}
+                        className="px-3 py-1 text-sm bg-black border border-gray-700 text-gray-300 rounded-full hover:border-green-400 hover:text-green-400 transition-colors font-mono"
+                    >
+                        {t(key)}
+                    </button>
+                ))}
+            </div>
         </div>
     );
 };

@@ -61,9 +61,9 @@ export const generateWhy = async (
         case 'claude':
         return callClaude(apiKey, prompt)
         case 'gemini':
-        return callGemini(apiKey, prompt)
+        // return callGemini(apiKey, prompt)
         case 'openai':
-        return callOpenAI(apiKey, prompt)
+        // return callOpenAI(apiKey, prompt)
         default:
         throw new Error(`Unsupported AI provider: ${provider}`)
     }

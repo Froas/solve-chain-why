@@ -1,8 +1,6 @@
-import type { AIResponse } from '../types'
-
-export const callGemini = async (apiKey: string, prompt: string): Promise<AIResponse> => {
+export const callGemini = async (apiKey: string, prompt: string): Promise<string> => {
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -27,7 +25,7 @@ export const callGemini = async (apiKey: string, prompt: string): Promise<AIResp
         }
 
         const text = data.candidates[0].content.parts[0].text
-        return JSON.parse(text)
+        return text
     } catch (error) {
         console.error('Gemini API call failed:', error)
         throw new Error(`Failed to call Gemini API: ${error instanceof Error ? error.message : 'Unknown error'}`)
