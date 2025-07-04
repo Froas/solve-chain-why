@@ -1,69 +1,142 @@
-# React + TypeScript + Vite
+# 5 Whys AI Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, open-source web app combining the classic Toyota "5 Whys" root cause analysis method with the power of AI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 About This Project
 
-## Expanding the ESLint configuration
+**5 Whys AI Analyzer** is a user-friendly tool that helps you get to the root cause of any problem. It blends the proven "5 Whys" questioning technique with AI-powered suggestions to guide you through every step, ensuring your analysis is thorough and actionable.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **AI-powered guidance** ensures you ask better questions.
+* **No data storage:** Your analysis stays private.
+* **Open source:** Freely available and transparent codebase.
+* **Flexible AI backend:** Choose your provider and use your own API key.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🎯 Purpose & Goals
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Primary Goals
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Make root cause analysis accessible to everyone.
+* Provide AI-guided questioning for deeper insights.
+* Ensure user privacy and data security at every step.
+* Deliver actionable solutions, not just analysis.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Use Cases
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Business process improvement.
+* Technical troubleshooting.
+* Personal problem solving.
+* Team retrospectives and post-mortems.
+
+---
+
+## ⚡ Technology Stack
+
+* **Runtime & Build:**
+  Bun (runtime & package manager), Vite (build tool), TypeScript (type safety)
+* **Frontend:**
+  React 18, React Router, React i18next (i18n)
+* **Styling:**
+  Tailwind CSS, custom dark theme, responsive design
+
+---
+
+## 🤖 AI Integration
+
+Currently supports the following AI models:
+
+* **Gemini** ([Google](https://deepmind.google/technologies/gemini/))
+* **OpenAI** ([OpenAI](https://platform.openai.com/docs/overview))
+* **Gloq** ([GitHub](https://github.com/gloq-ai))
+* **Llama** ([Meta AI](https://ai.meta.com/llama/))
+* **DeepSeek** ([DeepSeek](https://deepseek.com/))
+
+> **TODO:**
+>
+> * Add support for custom AI models (bring your own model).
+> * Expand language support for broader internationalization.
+
+---
+
+## 🔒 Security & Privacy
+
+* **No server-side storage:** All analysis happens in your browser.
+* **Direct API calls:** Your API key is used directly, never transmitted to our servers.
+* **Client-side only:** Full privacy and control—your data never leaves your device.
+* **API keys:** Stored only in localStorage, fully under your control.
+
+---
+
+## 💡 Best Practices
+
+* **Be specific:** Clearly state your initial problem.
+* **Ask “why” based on facts:** Avoid assumptions.
+* **Stop at actionable root causes:** Don’t overanalyze.
+* **Involve stakeholders:** Teamwork improves results.
+* **Document everything:** For future learning.
+* **Focus on systems:** Not blaming individuals.
+
+---
+
+## 🚀 Getting Started
+
+1. **Set up your AI API key**
+   Choose your preferred AI provider and add your API key in settings.
+2. **Define your problem clearly**
+   Start with a specific, observable problem statement.
+3. **Follow the AI guidance**
+   Let the AI suggest deeper, more insightful questions.
+4. **Implement solutions**
+   Use the insights to take action and solve the root cause.
+
+---
+
+## 📄 License
+
+**Custom License – Non-Commercial Use Only**
+Copyright © 2025 Froas
+
+### License Terms
+
+Permission is granted, free of charge, to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software **solely for personal, educational, and non-commercial purposes**.
+
+#### **Prohibited Uses**
+
+* No commercial or production use without explicit written permission.
+* Do not integrate into commercial products or paid services.
+
+#### **Permitted Uses**
+
+* Read, study, and experiment for personal, educational, or non-profit projects.
+* Fork, clone, and submit pull requests.
+
+**Commercial use requires a separate license. Contact the author to discuss.**
+
+### Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+---
+
+## ⚠️ Disclaimer on AI Guidance
+
+Please note: All suggestions and insights generated by this tool come from AI and are based solely on your input. For complex or critical situations, always seek professional advice from a qualified expert. This tool does not replace real-world expertise or professional consulting.
+
+---
+
+## 🔗 Links
+
+* Made with ❤️ by Froas
+
+---
+
+## 🙌 Contributing
+
+Pull requests and issues are welcome!
+
+---
+
+## Enjoy using 5 Whys AI Analyzer!
