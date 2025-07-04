@@ -14,7 +14,7 @@ export const ProblemDefinition: React.FC<ProblemDefinitionProps> = ({
     problem,
     onProblemChange,
     onSubmit,
-    style
+    
 }) => {
     const { t } = useTranslation();
 
