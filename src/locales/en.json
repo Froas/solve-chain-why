@@ -1,0 +1,70 @@
+{
+    "title": "5 Whys",
+    "subtitle": "Answer \"why\" five times and work with AI to discover the root cause, solutions, and insights.",
+    "defineProblem": "Define your problem",
+    "whatChallenge": "What challenge are you facing?",
+    "procrastinationHabits": "Procrastination habits",
+    "lowProductInterest": "Low product interest",
+    "familyConflicts": "Family conflicts",
+    "codeQualityIssues": "Code quality issues",
+    "chronicExhaustion": "Chronic exhaustion",
+    "startJourney": "Start journey",
+    "whyNumber": "Why #",
+    "whyHappen": "Why does \"{problem}\" happen?",
+    "whyOccur": "Why does \"{answer}\" occur?",
+    "enterAnswer": "Enter your answer...",
+    "next": "Next",
+    "analyze": "Analyze",
+    "analyzingResponses": "Analyzing your responses...",
+    "discoveryComplete": "Discovery complete!",
+    "foundAtRoot": "Here's what we found at the root of your challenge",
+    "rootCause": "Root cause",
+    "solutions": "Solutions",
+    "keyInsights": "Key insights",
+    "startNewJourney": "Start new journey",
+    "procrastinationExample": "I keep procrastinating on important personal projects even though I want to complete them",
+    "productLaunchExample": "We recieve your problem and know working on it. Please answer to 5 question below!",
+    "familyConflictExample": "I'm experiencing frequent conflicts with my teenage children about screen time and homework",
+    "codeQualityExample": "My team struggles to maintain code quality despite having review processes in place",
+    "exhaustionExample": "I feel constantly exhausted despite getting enough sleep and exercising regularly",
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "next": "Next",
+        "previous": "Previous",
+        "save": "Save",
+        "startNew": "Start New Analysis"
+    },
+    "header": {
+        "title": "5 Why Problem Solver",
+        "subtitle": "AI-Powered Root Cause Analysis"
+    },
+    "problemInput": {
+        "title": "Describe Your Problem",
+        "placeholder": "Describe the problem you want to analyze...",
+        "startButton": "Start 5 Why Analysis",
+        "startingButton": "Starting Analysis..."
+    },
+    "whyAnalysis": {
+        "problem": "Problem Statement",
+        "step": "Step {{number}}",
+        "question": "Why {{number}}:",
+        "answerPlaceholder": "Enter your answer...",
+        "generateNext": "Generate Next Why",
+        "rootCause": "Root Cause Identified",
+        "solutions": "Suggested Solutions"
+    },
+    "aiProvider": {
+        "select": "Select AI Provider:",
+        "claude": "Claude",
+        "gemini": "Gemini",
+        "openai": "OpenAI"
+    },
+    "language": {
+        "select": "Language",
+        "english": "English",
+        "japanese": "日本語"
+    }
+}

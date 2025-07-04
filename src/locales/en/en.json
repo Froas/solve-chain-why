@@ -1,0 +1,42 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "next": "Next",
+        "previous": "Previous",
+        "save": "Save",
+        "startNew": "Start New Analysis"
+    },
+    "header": {
+        "title": "5 Why Problem Solver",
+        "subtitle": "AI-Powered Root Cause Analysis"
+    },
+    "problemInput": {
+        "title": "Describe Your Problem",
+        "placeholder": "Describe the problem you want to analyze...",
+        "startButton": "Start 5 Why Analysis",
+        "startingButton": "Starting Analysis..."
+    },
+    "whyAnalysis": {
+        "problem": "Problem Statement",
+        "step": "Step {{number}}",
+        "question": "Why {{number}}:",
+        "answerPlaceholder": "Enter your answer...",
+        "generateNext": "Generate Next Why",
+        "rootCause": "Root Cause Identified",
+        "solutions": "Suggested Solutions"
+    },
+    "aiProvider": {
+        "select": "Select AI Provider:",
+        "claude": "Claude",
+        "gemini": "Gemini",
+        "openai": "OpenAI"
+    },
+    "language": {
+        "select": "Language",
+        "english": "English",
+        "japanese": "日本語"
+    }
+}
