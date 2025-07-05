@@ -14,14 +14,12 @@ function App() {
   const [aiProvider, setAiProvider] = useState<AIProvider>('gemini');
   const { i18n } = useTranslation();
 
-
   useEffect(() => {
     const savedLanguage = localStorage.getItem('preferred-language');
     if (savedLanguage && ['en', 'jp'].includes(savedLanguage)) {
       i18n.changeLanguage(savedLanguage);
     }
   }, [i18n]);
-
 
   useEffect(() => {
     const savedProvider = localStorage.getItem(
@@ -42,7 +40,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 flex flex-col">
+      <div className="min-h-screen bg-black flex flex-col">
         <Header
           aiProvider={aiProvider}
           onProviderChange={handleProviderChange}
